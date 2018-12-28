@@ -1,0 +1,44 @@
+<div class="home">
+  <nz-layout class="layout">
+    <nz-header>
+      <div class="logo"></div>
+      <nz-dropdown style="float: right">
+        <a nz-dropdown>
+            {{ name }} <i nz-icon type="down"></i>
+        </a>
+        <ul nz-menu nzSelectable>
+            <li nz-menu-item>
+            <a>个人信息</a>
+            </li>
+            <li nz-menu-item>
+            <a (click)="logout()">退出登录</a>
+            </li>
+        </ul>
+        </nz-dropdown>
+    </nz-header>
+    <nz-layout>
+      <nz-sider [nzWidth]="200" style="background:#fff">
+        <ul nz-menu [nzMode]="'inline'" style="height:100%">
+          <li nz-submenu *ngFor="let item of menu; index as i">
+            <span title><i nz-icon type="user"></i>{{ item.title }}</span>
+            <ul>
+              <li nz-menu-item *ngFor="let child of item.child; index as i" (click)="routeChange(child.url, child.title, item.title)">
+                {{ child.title }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nz-sider>
+      <nz-layout style="padding:0 24px 24px">
+        <nz-breadcrumb style="margin:16px 0;">
+          <nz-breadcrumb-item>{{ parent }}</nz-breadcrumb-item>
+          <nz-breadcrumb-item>{{ child }}</nz-breadcrumb-item>
+        </nz-breadcrumb>
+        <nz-content style="background:#fff; padding: 24px; min-height: 280px;">
+          <router-outlet (actived)="routeActive($event)"></router-outlet>
+        </nz-content>
+      </nz-layout>
+    </nz-layout>
+  </nz-layout>
+
+</div>

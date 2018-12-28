@@ -1,0 +1,38 @@
+<!-- <nz-table #basicTable [nzData]="dataSet" [nzTotal]="total" [(nzPageSize)]="pageSize" [(nzPageIndex)]="pageIndex" nzFrontPagination="false" (nzPageIndexChange)="pageIndexChange(page)" [nzLoading]="loading">
+  <thead>
+    <tr>
+      <th>昵称</th>
+      <th>openid</th>
+      <th>性别</th>
+      <th>登录方式</th>
+      <th>头像</th>
+      <th>ip</th>
+      <th>金币数</th>
+      <th>偷取金币次数</th>
+      <th>VIP等级</th>
+      <th>剩余时间</th>
+      <th>创建时间</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.nickname}}</td>
+      <td>{{data.openid}}</td>
+      <td>{{data.sex | sex}}</td>
+      <td>{{data.type | loginWay}}</td>
+      <td><img style="width: 50px; height: 50px;" [src]="data.headimgurl" ></td>
+      <td>{{data.ip}}</td>
+      <td>{{data.goldcoin}}</td>
+      <td>{{data.goldcount}}</td>
+      <td>{{data.vipstart | vipLevel}}</td>
+      <td>{{data.vipend | vipLeave}}</td>
+      <td>{{data.itime}}</td>
+      <td>
+        <a>Edit</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table> -->

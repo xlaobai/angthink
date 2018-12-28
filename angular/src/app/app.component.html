@@ -1,0 +1,3 @@
+<router-outlet></router-outlet>
+
+<nz-alert [nzType]="globalService.alertType" [nzMessage]="globalService.alertCont" nzCloseable nzShowIcon *ngIf="globalService.isAlert"></nz-alert>

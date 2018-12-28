@@ -1,0 +1,48 @@
+<!-- <div class="header">
+  <nz-dropdown [nzPlacement]="'bottomLeft'">
+    <button nz-button nz-dropdown>{{ cateButton }}</button>
+    <ul nz-menu>
+      <li nz-menu-item nzSelectable *ngFor="let cate of cates">
+        <a (click)="getGoods(cate)">{{ cate.cname }}</a>
+      </li>
+    </ul>
+  </nz-dropdown>
+  <button nz-button nzType="primary" routerLink="/home/shops/add">添加商品</button>
+</div>
+<nz-table #basicTable [nzData]="dataSet" [nzTotal]="total" [(nzPageSize)]="pageSize" [(nzPageIndex)]="pageIndex"
+  nzFrontPagination="false" (nzPageIndexChange)="pageIndexChange(page)" [nzLoading]="loading">
+  <thead>
+    <tr>
+      <th>商品ID</th>
+      <th>商品名</th>
+      <th>缩略图</th>
+      <th>单价</th>
+      <th>剩余数量</th>
+      <th>已被兑换次数</th>
+      <th>描述</th>
+      <th>时效性</th>
+      <th>时效单位</th>
+      <th>创建时间</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.gd_id}}</td>
+      <td>{{data.name}}</td>
+      <td><img style="width: 50px; height: 50px;" [src]="data.headimgurl"></td>
+      <td>{{data.goldcoin}}</td>
+      <td>{{data.count}}</td>
+      <td>{{data.convcount}}</td>
+      <td>{{data.desc}}</td>
+      <td>{{data.aging}}</td>
+      <td>{{data.unit}}</td>
+      <td>{{data.itime}}</td>
+      <td>
+          <a>Edit</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+    </tr>
+  </tbody>
+</nz-table> -->

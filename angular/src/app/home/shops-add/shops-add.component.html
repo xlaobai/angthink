@@ -1,0 +1,80 @@
+<!-- <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm($event,validateForm.value)">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>商品名</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="name" placeholder="async validate try to write JasonWood">
+      <nz-form-explain *ngIf="validateForm.get('name').dirty && validateForm.get('name').errors || validateForm.get('name').pending ">
+        <ng-container *ngIf="validateForm.get('name').hasError('required')">
+          商品名不能为空
+        </ng-container>
+        <ng-container *ngIf="validateForm.get('name').hasError('duplicated')">
+          商品名已存在
+        </ng-container>
+        <ng-container *ngIf="validateForm.get('name').pending">
+          Validating...
+        </ng-container>
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7">商品简介</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="desc" placeholder="desc">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>商品类型</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <nz-select formControlName="cid" style="width: 200px;">
+        <nz-option *ngFor="let cate of cates" (click)="selectCate(cate)" [nzLabel]="cate.cname" [nzValue]="cate.cid"></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>商品单价</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="goldcoin" placeholder="goldcoin">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+        <nz-form-label [nzSpan]="7" nzRequired>商品缩略图</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzHasFeedback>
+          <input nz-input formControlName="pic" placeholder="goldcoin">
+        </nz-form-control>
+      </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>商品是否可数</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <label nz-checkbox formControlName="count_status"></label>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7">商品总数量</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="count" placeholder="商品数量不可数时不填">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7">商品时效性</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="aging" placeholder="永久的商品不填">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7">时效单位</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <nz-select formControlName="unit" style="width: 200px;" [nzPlaceHolder]="'永久的商品不选'">
+        <nz-option nzLabel="分钟" nzValue="minute"></nz-option>
+        <nz-option nzLabel="小时" nzValue="hour"></nz-option>
+        <nz-option nzLabel="天" nzValue="day"></nz-option>
+        <nz-option nzLabel="月" nzValue="mouth"></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzOffset]="7" [nzSpan]="12">
+      <button nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
+      <button nz-button (click)="resetForm($event)">Reset</button>
+    </nz-form-control>
+  </nz-form-item>
+</form> -->
